@@ -1,0 +1,28 @@
+{
+  "name": "greasy_hacks_backend",
+  "version": "1.0.0",
+  "description": "Greasyhacks Node + Express with Typescript Backend",
+  "main": "server.ts",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "set DEBUG=express:* & set NODE_ENV=development & ts-node server/server.ts",
+    "production": "set DEBUG=false & set NODE_ENV=production & ts-node -F -D server/server.ts&",
+    "start": "npm run production"
+  },
+  "author": "Rolando Moreno",
+  "license": "MIT",
+  "dependencies": {
+    "@types/mongoose": "^4.7.3",
+    "@types/node": "^6.0.56",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.6",
+    "path": "^0.12.7"
+  }
+}
