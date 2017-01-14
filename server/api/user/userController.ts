@@ -9,10 +9,9 @@ import * as express from 'express';
 let userRouter = express.Router();
 
 /**
- * CREATE ONE
- * Create a new instance of the model and persist it into the data source.
+ * APPLICATION API DATA
  */
-userRouter.post('/', (req, res, next) => {
+userRouter.get('/', (req, res, next) => {
     res.json({
         "name": "Greasyhacks Node + Express with Typescript Backend",
         "version": "1.0.0",
@@ -26,13 +25,11 @@ userRouter.post('/', (req, res, next) => {
     });
 });
 
-
-
 /**
  * CREATE ONE
  * Create a new instance of the model and persist it into the data source.
  */
-userRouter.post('/', (req, res, next) => {
+userRouter.post('/users', (req, res, next) => {
     res.json({
 
         comment: 'Create a new instance of the model and persist it into the data source.',
@@ -45,7 +42,7 @@ userRouter.post('/', (req, res, next) => {
  * READ ALL
  * Find all instances of the model matched by filter from the data source.
  */
-userRouter.get('/', (req, res, next) => {
+userRouter.get('/users', (req, res, next) => {
 
     res.json({
 
@@ -60,7 +57,7 @@ userRouter.get('/', (req, res, next) => {
  * READ ONE BY ID
  * Find a model instance by {{id}} from the data source.
  */
-userRouter.get('/:userId', (req, res, next) => {
+userRouter.get('/users/:userId', (req, res, next) => {
     res.json({
         response: 'success',
         value: req.params,
@@ -72,7 +69,7 @@ userRouter.get('/:userId', (req, res, next) => {
  * UPDATE ONE BY ID
  * Patch attributes for a model instance and persist it into the data source.
  */
-userRouter.put('/:userId', (req, res, next) => {
+userRouter.put('/users/:userId', (req, res, next) => {
     res.json({
         response: 'success',
         value: req.params,
@@ -84,7 +81,7 @@ userRouter.put('/:userId', (req, res, next) => {
  * DELETE ONE BY ID
  * Delete a model instance by {{id}} from the data source.
  */
-userRouter.delete('/:userId', (req, res, next) => {
+userRouter.delete('/users/:userId', (req, res, next) => {
     res.json({
         response: 'success',
         value: req.params,
